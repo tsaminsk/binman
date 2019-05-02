@@ -1,0 +1,111 @@
+mixin clientItem(obj)
+    if (obj.objects)
+        - var objNum = 0
+        each item in obj.objects
+            - objNum++
+    .clients__row
+        .clients__content-item.js-item
+            .clients__item-head(class=obj.className)
+                .clients__col 
+                    .clients__icon
+                        each item in typesClients
+                            if (item.type == obj.className)
+                                <svg class="svg-#{item.svgName}-dims"><use xlink:href="##{item.svgName}"></use></svg>
+                    .clients__name
+                        h3 #{obj.name}
+                        if (obj.inn) 
+                            p ИНН: #{obj.inn}
+                        else 
+                            p ИНН: Не указан
+                        if (obj.ogrn) 
+                            p ОГРН: #{obj.ogrn}
+                        if (obj.className === "type-5" || obj.className === "type-4")
+                            if (obj.pasp)
+                                p Паспорт: #{obj.pasp}
+                            else
+                                p Паспорт: Не указан
+                if (obj.contracts)
+                    - var num = 0
+                    each item in obj.contracts
+                        - num++
+                if ( num === 1)
+                    .clients__col
+                        .clients__icon
+                            if (obj.className === "type-1" || obj.className === "type-4")
+                                <svg class="svg-documents-ok-dims"><use xlink:href="#documents-ok"></use></svg>
+                            if (obj.className === "type-5")
+                                <svg class="svg-documents-dims"><use xlink:href="#documents"></use></svg>
+                        .clients__data
+                            h3 #{obj.contracts[0].number}
+                            p Тип договора: #{obj.contracts[0].type}
+                    +clientItemInner(objNum, obj.money, obj.recycle, obj.zones, obj.containers, obj.volume)
+                else if ( num >= 2 )
+                    .clients__col
+                        .clients__icon-gray
+                            <svg class="svg-documents-ok-dims"><use xlink:href="#documents-ok"></use></svg>
+                            p C клиентом заключено #{num} договора
+                            a(href="#") Подробнее
+                    +clientItemInner(objNum, obj.money, obj.recycle, obj.zones, obj.containers, obj.volume)
+                else
+                    .clients__col.clients__col-warning
+                        .clients__icon-red
+                            <svg class="svg-no-contacts-dims"><use xlink:href="#no-contacts"></use></svg>
+                            p C клиентом нет заключеных договоров
+                            a(href="#") Заключить договор
+                    
+                .clients__col-warrow
+                    .clients__item-arrow
+                        a(href="#").js-arrow
+                            <svg class="svg-select-arrow-dims"><use xlink:href="#select-arrow"></use></svg>
+            .clients__item-info.js-info
+                .clients__info-title
+                    h3 Объекты клиента
+                    p Всего объектов: #{objNum}
+                .clients__info-objects
+                    .clients__info-object.clients__info-object--head
+                        | Объект
+                    if ( objNum >= 1 )
+                        each item in obj.objects
+                            .clients__info-object= item.name
+                .clients__info-footer
+                    a(href="#").clients__info-btn
+                        <svg class="svg-card-dims"><use xlink:href="#card"></use></svg>
+                        span Перейти в карточку
+                    a(href="#").clients__info-link.js-close-item Скрыть детали
+
+
+mixin clientItemInner(objects, money, recycle, zones, containers, volume)
+    .clients__col
+        <svg class="svg-object-dims"><use xlink:href="#object"></use></svg>
+        if (objects == 1)
+            span #{objects} объект
+        else if (objects >= 2 && objects <= 5)
+            span #{objects} объекта
+        else if (objects > 5)
+            span #{objects} объектов
+    .clients__col
+        .clients__col-icons
+            <svg class="svg-money-dims"><use xlink:href="#money"></use></svg>
+            <svg class="svg-recycle-dims"><use xlink:href="#recycle"></use></svg>
+        .clients__col-datas
+            span #{money} &#8381;
+            span #{recycle} м<sup>3</sup>
+    .clients__col
+        .clients__col-icons
+            <svg class="svg-area-dims"><use xlink:href="#area"></use></svg>
+            <svg class="svg-container-dims"><use xlink:href="#container"></use></svg>
+        .clients__col-datas
+            if (zones == 1)
+                span #{zones} геозона
+            else if (zones >= 2 && zones < 5)
+                span #{zones} геозоны
+            else if (zones >= 5)
+                span #{zones} геозон
+
+            if (containers == 1)
+                span #{containers} контейнер - #{volume} м<sup>3</sup>
+            else if (containers >= 2 && containers < 5)
+                span #{containers} контейнера - #{volume} м<sup>3</sup>
+            else if (containers >= 5)
+                span #{containers} контейнеров - #{volume} м<sup>3</sup>
+                        

@@ -1,0 +1,16 @@
+.clients
+    .container
+        .clients__title 
+            h1 Ваши клиенты
+            p Всего погрузок:
+                span#total 2020
+        .clients__content
+            .clients__row
+                .clients__content-title
+                    .clients__col Клиент
+                    .clients__col Договоры
+                    .clients__col Объекты
+                    .clients__col Начисления и объем
+                    .clients__col Геозоны и контейнеры
+            each item in dataItems
+                +clientItem(item)

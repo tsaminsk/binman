@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Documents" class="cls-1" d="M13,18H1a.984.984,0,0,1-1-1V5H5V0h8a.984.984,0,0,1,1,1V17A.984.984,0,0,1,13,18ZM3,13v1H7V13Zm0-3v1h8V10ZM3,7V8h8V7ZM4,4H0L4,0V4Z"/>
+</svg>

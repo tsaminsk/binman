@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Кабинет пользователя - Ваши клиенты</title>
+    <meta content="Matvey Phoenix" name="author">
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/images/apple-touch-favicon.png">
+    <link rel="stylesheet" href="./assets/styles/main.min.css">
+</head>
+
+<body><svg width="0" height="0" style="position:absolute">
+        <symbol viewBox="0 0 18 18" id="active-company" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 18H1v-7h5v1h6v-1h5v7zm-6-7H7V9h4v2zm-5-1H0V4h5V0h8v4h5v6h-6V8H6v2zm1-8v2h4V2z" />
+        </symbol>
+        <symbol viewBox="0 0 14.02 18.01" id="active-individual-client" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 18a1.959 1.959 0 0 1-2-2v-3s1-4 4-4a9.972 9.972 0 0 0 3 1 10.182 10.182 0 0 0 3-1c3 0 4 4 4 4v3a1.959 1.959 0 0 1-2 2zM3 4a4 4 0 1 1 4 4 4 4 0 0 1-4-4z" />
+        </symbol>
+        <symbol viewBox="0 0 18 18" id="archive-company" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 18H1v-8H0V4h5V0h8v4h5v6h-1v8zM6 8.35L12 15h1V7h-1v6.65L6 7H5v8h1V8.35zM7 2v2h4V2z" />
+        </symbol>
+        <symbol viewBox="0 0 14 14" id="area" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 14a7 7 0 1 1 7-7 7.008 7.008 0 0 1-7 7zM7 2a5 5 0 1 0 4.9 6 .01.01 0 0 0 0-.008 4.927 4.927 0 0 0-1.253-.067C9.221 7.925 7.022 8 7 8V6h4.9A5.011 5.011 0 0 0 7 2z" />
+        </symbol>
+        <symbol viewBox="0 0 96.06 22.03" id="binman" xmlns="http://www.w3.org/2000/svg">
+            <path d="M94.91 22a1.054 1.054 0 0 1-.771-.322 1.067 1.067 0 0 1-.32-.776V13.76a4.8 4.8 0 0 0-1.438-3.495 4.88 4.88 0 0 0-6.941 0A4.8 4.8 0 0 0 84 13.76v7.14a1.064 1.064 0 0 1-.32.776 1.082 1.082 0 0 1-1.541 0 1.067 1.067 0 0 1-.32-.776V7.717a1.067 1.067 0 0 1 .32-.776 1.082 1.082 0 0 1 1.541 0 1.064 1.064 0 0 1 .32.776v.893a7.046 7.046 0 0 1 9.921.1A6.933 6.933 0 0 1 96 13.76v7.14a1.067 1.067 0 0 1-.32.776 1.053 1.053 0 0 1-.77.324zm-16.364 0a1.05 1.05 0 0 1-.77-.322 1.064 1.064 0 0 1-.32-.776v-1.209A7.455 7.455 0 0 1 72 22a7.365 7.365 0 0 1-5.4-2.252 7.466 7.466 0 0 1-2.236-5.438A7.467 7.467 0 0 1 66.6 8.871a7.6 7.6 0 0 1 10.8 0 7.467 7.467 0 0 1 2.237 5.439v6.59a1.067 1.067 0 0 1-.32.776 1.053 1.053 0 0 1-.771.324zM72 8.816a5.262 5.262 0 0 0-3.859 1.606 5.339 5.339 0 0 0-1.6 3.887 5.335 5.335 0 0 0 1.6 3.886 5.439 5.439 0 0 0 7.718 0 5.335 5.335 0 0 0 1.6-3.886 5.339 5.339 0 0 0-1.6-3.887A5.262 5.262 0 0 0 72 8.816zM61.091 22a1.05 1.05 0 0 1-.77-.322A1.064 1.064 0 0 1 60 20.9v-8.24a3.733 3.733 0 0 0-1.119-2.72 3.8 3.8 0 0 0-5.4 0 3.735 3.735 0 0 0-1.118 2.72v8.24a1.067 1.067 0 0 1-.32.776 1.082 1.082 0 0 1-1.541 0 1.064 1.064 0 0 1-.32-.776v-8.24a3.736 3.736 0 0 0-1.119-2.72 3.8 3.8 0 0 0-5.4 0 3.735 3.735 0 0 0-1.118 2.72v8.24a1.067 1.067 0 0 1-.32.776 1.082 1.082 0 0 1-1.541 0 1.065 1.065 0 0 1-.321-.776V7.717a1.065 1.065 0 0 1 .321-.776 1.082 1.082 0 0 1 1.541 0 1.067 1.067 0 0 1 .32.776v.289a5.713 5.713 0 0 1 3.818-1.387A5.785 5.785 0 0 1 50.6 8.391a6.957 6.957 0 0 1 .669.783 6.944 6.944 0 0 1 .668-.783 5.962 5.962 0 0 1 8.482 0 5.867 5.867 0 0 1 1.76 4.271V20.9a1.067 1.067 0 0 1-.32.776 1.053 1.053 0 0 1-.768.324zm-24 0a1.05 1.05 0 0 1-.77-.322A1.067 1.067 0 0 1 36 20.9v-7.14a4.8 4.8 0 0 0-1.438-3.495 4.881 4.881 0 0 0-6.942 0 4.8 4.8 0 0 0-1.438 3.495v7.14a1.067 1.067 0 0 1-.32.776 1.082 1.082 0 0 1-1.541 0A1.064 1.064 0 0 1 24 20.9V7.717a1.064 1.064 0 0 1 .32-.776 1.082 1.082 0 0 1 1.541 0 1.067 1.067 0 0 1 .32.776v.893a7.046 7.046 0 0 1 9.921.1 6.932 6.932 0 0 1 2.079 5.046V20.9a1.064 1.064 0 0 1-.32.776 1.05 1.05 0 0 1-.77.324zm-17.455 0a1.05 1.05 0 0 1-.77-.322 1.067 1.067 0 0 1-.32-.776V7.717a1.067 1.067 0 0 1 .32-.776 1.082 1.082 0 0 1 1.541 0 1.064 1.064 0 0 1 .32.776V20.9a1.064 1.064 0 0 1-.32.776 1.05 1.05 0 0 1-.771.324zm-12 0a7.362 7.362 0 0 1-5.4-2.252A7.466 7.466 0 0 1 0 14.31V1.1A1.067 1.067 0 0 1 .32.323 1.05 1.05 0 0 1 1.091 0a1.05 1.05 0 0 1 .77.323 1.064 1.064 0 0 1 .32.776v7.827l.055-.055a7.362 7.362 0 0 1 5.4-2.252 7.365 7.365 0 0 1 5.4 2.252 7.47 7.47 0 0 1 2.236 5.439 7.469 7.469 0 0 1-2.236 5.438A7.365 7.365 0 0 1 7.637 22zm0-13.183a5.262 5.262 0 0 0-3.859 1.606 5.339 5.339 0 0 0-1.6 3.887 5.335 5.335 0 0 0 1.6 3.886 5.262 5.262 0 0 0 3.86 1.604 5.262 5.262 0 0 0 3.863-1.6 5.335 5.335 0 0 0 1.595-3.886 5.339 5.339 0 0 0-1.595-3.891 5.262 5.262 0 0 0-3.863-1.607zm12-4.12a1.313 1.313 0 0 1-.961-.405 1.366 1.366 0 0 1 0-1.936 1.343 1.343 0 0 1 1.922 0 1.366 1.366 0 0 1 0 1.936 1.313 1.313 0 0 1-.961.408z" />
+        </symbol>
+        <symbol viewBox="0 0 13.02 13.02" id="card" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 13H9a1.968 1.968 0 0 1-2-2V9a1.968 1.968 0 0 1 2-2h2a1.97 1.97 0 0 1 2 2v2a1.97 1.97 0 0 1-2 2zm-7 0H2a1.968 1.968 0 0 1-2-2V9a1.968 1.968 0 0 1 2-2h2a1.97 1.97 0 0 1 2 2v2a1.97 1.97 0 0 1-2 2zm7-7H9a1.969 1.969 0 0 1-2-2V2a1.968 1.968 0 0 1 2-2h2a1.97 1.97 0 0 1 2 2v2a1.97 1.97 0 0 1-2 2zM4 6H2a1.969 1.969 0 0 1-2-2V2a1.968 1.968 0 0 1 2-2h2a1.97 1.97 0 0 1 2 2v2a1.97 1.97 0 0 1-2 2z" />
+        </symbol>
+        <symbol viewBox="0 0 18.12 16" id="clients" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.424 16A12.308 12.308 0 0 1 5 15.156v-2.94c0-1.884 1.042-2.879 3.012-2.879h2.24c1.865 0 3.748.89 3.748 2.879v2.568A10.213 10.213 0 0 1 9.424 16zm-6.515-2.75A4.273 4.273 0 0 1 0 12V9.337A2.759 2.759 0 0 1 .8 7.18 3.209 3.209 0 0 1 3 6.5h2.489a4.159 4.159 0 0 0 1.011 2A3.923 3.923 0 0 0 4 12.22v.874a3.956 3.956 0 0 1-1.091.157zM15 13.112v-.892c0-2.835-3.465-3.713-3.5-3.721.012-.01 1.253-1.067 1.276-2H15a3.206 3.206 0 0 1 2.2.68 2.761 2.761 0 0 1 .8 2.158V12a4.056 4.056 0 0 1-3 1.112zM9.133 8.456a2.72 2.72 0 0 1-2.64-2.789 2.72 2.72 0 0 1 2.64-2.788 2.72 2.72 0 0 1 2.64 2.788 2.72 2.72 0 0 1-2.64 2.789zM4.018 5.577a2.72 2.72 0 0 1-2.641-2.788A2.72 2.72 0 0 1 4.018 0a2.72 2.72 0 0 1 2.638 2.789v.156a3.479 3.479 0 0 0-1.228 2.2 2.532 2.532 0 0 1-1.41.432zm10.034 0a2.53 2.53 0 0 1-1.116-.264 3.462 3.462 0 0 0-1.522-2.567A2.727 2.727 0 0 1 14.052 0a2.72 2.72 0 0 1 2.64 2.788 2.72 2.72 0 0 1-2.64 2.788z" />
+        </symbol>
+        <symbol viewBox="0 0 12.02 14.01" id="container" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 14H2a.985.985 0 0 1-1-1V4h10v9a.985.985 0 0 1-1 1zM7 6v6h1V6zM4 6v6h1V6zm8-3H0v-.952A1.018 1.018 0 0 1 1 1h2a.982.982 0 0 1 1-1h4a.984.984 0 0 1 1 1h2a1.018 1.018 0 0 1 1 1.048V3z" />
+        </symbol>
+        <symbol viewBox="0 0 14.01 18.01" id="documents" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 18H1a.984.984 0 0 1-1-1v-5h1l1.5-2L4 12l1.5-2L7 12l1.5-2 1.5 2 1.5-2 1.517 2H14v5a.984.984 0 0 1-1 1zm-3-8L8.5 8 7 10 5.5 8 4 10 2.5 8 1 10H0V5h5V0h8a.984.984 0 0 1 1 1v9h-.986L11.5 8 10 10zM4 4H0l4-4v4z" />
+        </symbol>
+        <symbol viewBox="0 0 14.01 18.01" id="documents-ok" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 18H1a.984.984 0 0 1-1-1V5h5V0h8a.984.984 0 0 1 1 1v16a.984.984 0 0 1-1 1zM3 13v1h4v-1zm0-3v1h8v-1zm0-3v1h8V7zm1-3H0l4-4v4z" />
+        </symbol>
+        <symbol viewBox="0 0 26.17 36.01" id="logo" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 36a2 2 0 1 1 1.732-3h17.31a1.766 1.766 0 0 0 1.714-1A2.562 2.562 0 0 0 23 31V12a1.969 1.969 0 0 0-2-2H5a1.969 1.969 0 0 0-2 2v12.268a2 2 0 1 1-2 0V11a3.77 3.77 0 0 1 .375-1.5A2.711 2.711 0 0 1 4 8h18a2.711 2.711 0 0 1 2.625 1.5A3.77 3.77 0 0 1 25 11v21a3.77 3.77 0 0 1-.375 1.5A2.711 2.711 0 0 1 22 35H3.732A2.008 2.008 0 0 1 2 36zm14-6a.984.984 0 0 1-1-1V14a1 1 0 1 1 2 0v15a.984.984 0 0 1-1 1zm-6 0a.984.984 0 0 1-1-1V14a1 1 0 1 1 2 0v15a.984.984 0 0 1-1 1zM25 6H1a1 1 0 0 1 0-2h7V2a1.968 1.968 0 0 1 2-2h6a1.968 1.968 0 0 1 2 2v2h7a1 1 0 0 1 0 2zM10 2v2h6V2z" />
+        </symbol>
+        <symbol viewBox="0 0 12 14" id="money" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 14H2v-2H0v-2h2V8H0V6h2v-.161C1.969 3.685 1.932.067 2 0h6a6.339 6.339 0 0 1 2 .708 3.708 3.708 0 0 1 0 6.582A6.329 6.329 0 0 1 8 8H4v2h5v2H4v2zM4 2v4h3.5c.025 0 2.5-.245 2.5-2S7.525 2 7.5 2z" />
+        </symbol>
+        <symbol viewBox="0 0 12.16 12.16" id="no-contacts" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.426 6L11.7 1.722A1.008 1.008 0 0 0 10.278.3L6 4.574 1.721.3A1.008 1.008 0 1 0 .3 1.722L4.574 6 .3 10.278A1.008 1.008 0 0 0 1.721 11.7L6 7.426l4.278 4.274a1.008 1.008 0 0 0 1.422-1.422z" />
+        </symbol>
+        <symbol viewBox="0 0 18 18" id="not-active-company" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 18H1v-8H0V4h5V0h8v4h5v6h-1v8zm-8-6.276L12.269 15l.731-.731L9.72 11 13 7.728 12.269 7 9 10.272 5.714 7 5 7.728 8.264 11 5 14.269l.714.731L9 11.725zM7 2v2h4V2z" />
+        </symbol>
+        <symbol viewBox="0 0 14.02 18.01" id="not-active-individual-client" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 18H2a1.968 1.968 0 0 1-2-2v-3a7.862 7.862 0 0 1 .875-2A3.769 3.769 0 0 1 4 9a9.823 9.823 0 0 0 3 1 10.3 10.3 0 0 0 3-1 3.765 3.765 0 0 1 3.125 2A7.869 7.869 0 0 1 14 13v3a1.969 1.969 0 0 1-2 2zm-5-3.276L9.268 17l.732-.731L7.72 14 10 11.729 9.268 11 7 13.272 4.714 11 4 11.729 6.264 14 4 16.269l.714.731L7 14.725zM7 8a4 4 0 1 1 4-4 4.005 4.005 0 0 1-4 4z" />
+        </symbol>
+        <symbol viewBox="0 0 12 14" id="object" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 14H0V1h2V0h8v1h2v13H7v-2H5v2zm3-7v2h2V7zM5 7v2h2V7zM2 7v2h2V7zm6-3v2h2V4zM5 4v2h2V4zM2 4v2h2V4z" />
+        </symbol>
+        <symbol viewBox="0 0 14.06 14" id="recycle" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.5 14a.756.756 0 0 1-.55-.239L6.4 12.132a.841.841 0 0 1 0-1.152l1.551-1.629a.752.752 0 0 1 1.1 0 .842.842 0 0 1 0 1.152l-.229.24h3.018l-.886-1.529a.838.838 0 0 1 .263-1.114.751.751 0 0 1 .4-.118.767.767 0 0 1 .666.392l1.6 2.766a.9.9 0 0 1-.659 1.315H8.822l.23.159a.842.842 0 0 1 0 1.152A.753.753 0 0 1 8.5 14zm-4.664-1.55H.781a.868.868 0 0 1-.681-.492.847.847 0 0 1 .013-.822l2.024-3.507-.258.071a.741.741 0 0 1-.2.028.785.785 0 0 1-.751-.6.82.82 0 0 1 .55-1l2.125-.6A.738.738 0 0 1 3.8 5.5a.786.786 0 0 1 .751.6l.569 2.226a.82.82 0 0 1-.55 1 .729.729 0 0 1-.2.028.785.785 0 0 1-.751-.6l-.1-.38-1.362 2.369h1.679a.8.8 0 0 1 .778.814.863.863 0 0 1-.778.893zm6.223-5.55a.729.729 0 0 1-.2-.028l-2.125-.6a.822.822 0 0 1-.55-1 .785.785 0 0 1 .751-.6.729.729 0 0 1 .2.028l.254.071L7 2.383l-.928 1.6a.766.766 0 0 1-.666.391A.754.754 0 0 1 5 4.258a.837.837 0 0 1-.261-1.119L6.334.392a.759.759 0 0 1 1.328 0L9.779 4.03l.1-.384a.785.785 0 0 1 .751-.6.764.764 0 0 1 .2.028.82.82 0 0 1 .55 1L10.811 6.3a.786.786 0 0 1-.752.6z" />
+        </symbol>
+        <symbol viewBox="0 0 8.08 5.08" id="select-arrow" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.88 1.2a.816.816 0 0 0 0-.851L7.591.1a.456.456 0 0 0-.578 0L4 3.4.988.1a.457.457 0 0 0-.579 0L.12.353a.815.815 0 0 0 0 .851L3.677 4.9a.961.961 0 0 0 .867 0L7.88 1.2" />
+        </symbol>
+    </svg>
+    <header class="header"><a href="/"><svg class="svg-logo-dims">
+                <use xlink:href="#logo"></use>
+            </svg>
+            <svg class="svg-binman-dims">
+                <use xlink:href="#binman"></use>
+            </svg></a></header>
+    <div class="main clearfix">
+        <div class="sidebar"><a class="sidebar__item" href="#"><svg class="svg-clients-dims">
+                    <use xlink:href="#clients"></use>
+                </svg></a></div>
+        <div class="clients">
+            <div class="container">
+                <div class="clients__title">
+                    <h1>Ваши клиенты</h1>
+                    <p>Всего погрузок:<span id="total">2020</span></p>
+                </div>
+                <div class="clients__content">
+                    <div class="clients__row">
+                        <div class="clients__content-title">
+                            <div class="clients__col">Клиент</div>
+                            <div class="clients__col">Договоры</div>
+                            <div class="clients__col">Объекты</div>
+                            <div class="clients__col">Начисления и объем</div>
+                            <div class="clients__col">Геозоны и контейнеры</div>
+                        </div>
+                    </div>
+                    <div class="clients__row">
+                        <div class="clients__content-item js-item">
+                            <div class="clients__item-head type-1">
+                                <div class="clients__col">
+                                    <div class="clients__icon"><svg class="svg-active-company-dims">
+                                            <use xlink:href="#active-company"></use>
+                                        </svg></div>
+                                    <div class="clients__name">
+                                        <h3>УФССП РОССИИ ПО КЕМЕРОВСКОЙ ОБЛАСТИ</h3>
+                                        <p>ИНН: 4205077474</p>
+                                        <p>ОГРН: 1044205103832</p>
+                                    </div>
+                                </div>
+                                <div class="clients__col">
+                                    <div class="clients__icon"><svg class="svg-documents-ok-dims">
+                                            <use xlink:href="#documents-ok"></use>
+                                        </svg></div>
+                                    <div class="clients__data">
+                                        <h3>№12-СЖ/12 от 24.01.2019</h3>
+                                        <p>Тип договора: по норме</p>
+                                    </div>
+                                </div>
+                                <div class="clients__col"><svg class="svg-object-dims">
+                                        <use xlink:href="#object"></use>
+                                    </svg><span>2 объекта</span></div>
+                                <div class="clients__col">
+                                    <div class="clients__col-icons"><svg class="svg-money-dims">
+                                            <use xlink:href="#money"></use>
+                                        </svg>
+                                        <svg class="svg-recycle-dims">
+                                            <use xlink:href="#recycle"></use>
+                                        </svg></div>
+                                    <div class="clients__col-datas"><span>3 040 &#8381;</span><span>8 м<sup>3</sup></span></div>
+                                </div>
+                                <div class="clients__col">
+                                    <div class="clients__col-icons"><svg class="svg-area-dims">
+                                            <use xlink:href="#area"></use>
+                                        </svg>
+                                        <svg class="svg-container-dims">
+                                            <use xlink:href="#container"></use>
+                                        </svg></div>
+                                    <div class="clients__col-datas"><span>1 геозона</span><span>6 контейнеров - 6.6 м<sup>3</sup></span></div>
+                                </div>
+                                <div class="clients__col-warrow">
+                                    <div class="clients__item-arrow"><a class="js-arrow" href="#"><svg class="svg-select-arrow-dims">
+                                                <use xlink:href="#select-arrow"></use>
+                                            </svg></a></div>
+                                </div>
+                            </div>
+                            <div class="clients__item-info js-info">
+                                <div class="clients__info-title">
+                                    <h3>Объекты клиента</h3>
+                                    <p>Всего объектов: 2</p>
+                                </div>
+                                <div class="clients__info-objects">
+                                    <div class="clients__info-object clients__info-object--head">Объект</div>
+                                    <div class="clients__info-object">Объект №1</div>
+                                    <div class="clients__info-object">Объект №2</div>
+                                </div>
+                                <div class="clients__info-footer"><a class="clients__info-btn" href="#"><svg class="svg-card-dims">
+                                            <use xlink:href="#card"></use>
+                                        </svg><span>Перейти в карточку</span></a><a class="clients__info-link js-close-item" href="#">Скрыть детали</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clients__row">
+                        <div class="clients__content-item js-item">
+                            <div class="clients__item-head type-2">
+                                <div class="clients__col">
+                                    <div class="clients__icon"><svg class="svg-not-active-company-dims">
+                                            <use xlink:href="#not-active-company"></use>
+                                        </svg></div>
+                                    <div class="clients__name">
+                                        <h3>ООО &quot;СИСТЕМА УНИВЕРСАМОВ &quot;БЕГЕМОТ&quot;</h3>
+                                        <p>ИНН: 4205259611</p>
+                                        <p>ОГРН: 1134205003580</p>
+                                    </div>
+                                </div>
+                                <div class="clients__col">
+                                    <div class="clients__icon-gray"><svg class="svg-documents-ok-dims">
+                                            <use xlink:href="#documents-ok"></use>
+                                        </svg>
+                                        <p>C клиентом заключено 2 договора</p><a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="clients__col"><svg class="svg-object-dims">
+                                        <use xlink:href="#object"></use>
+                                    </svg><span>6 объектов</span></div>
+                                <div class="clients__col">
+                                    <div class="clients__col-icons"><svg class="svg-money-dims">
+                                            <use xlink:href="#money"></use>
+                                        </svg>
+                                        <svg class="svg-recycle-dims">
+                                            <use xlink:href="#recycle"></use>
+                                        </svg></div>
+                                    <div class="clients__col-datas"><span>238 985.15 &#8381;</span><span>236.52 м<sup>3</sup></span></div>
+                                </div>
+                                <div class="clients__col">
+                                    <div class="clients__col-icons"><svg class="svg-area-dims">
+                                            <use xlink:href="#area"></use>
+                                        </svg>
+                                        <svg class="svg-container-dims">
+                                            <use xlink:href="#container"></use>
+                                        </svg></div>
+                                    <div class="clients__col-datas"><span>2 геозоны</span><span>3 контейнера - 10.2 м<sup>3</sup></span></div>
+                                </div>
+                                <div class="clients__col-warrow">
+                                    <div class="clients__item-arrow"><a class="js-arrow" href="#"><svg class="svg-select-arrow-dims">
+                                                <use xlink:href="#select-arrow"></use>
+                                            </svg></a></div>
+                                </div>
+                            </div>
+                            <div class="clients__item-info js-info">
+                                <div class="clients__info-title">
+                                    <h3>Объекты клиента</h3>
+                                    <p>Всего объектов: 6</p>
+                                </div>
+                                <div class="clients__info-objects">
+                                    <div class="clients__info-object clients__info-object--head">Объект</div>
+                                    <div class="clients__info-object">Объект №1</div>
+                                    <div class="clients__info-object">Объект №2</div>
+                                    <div class="clients__info-object">Объект №3</div>
+                                    <div class="clients__info-object">Объект №100</div>
+                                    <div class="clients__info-object">Объект №200</div>
+                                    <div class="clients__info-object">327 создвать не буду, пусть будет маленькое несоответствие</div>
+                                </div>
+                                <div class="clients__info-footer"><a class="clients__info-btn" href="#"><svg class="svg-card-dims">
+                                            <use xlink:href="#card"></use>
+                                        </svg><span>Перейти в карточку</span></a><a class="clients__info-link js-close-item" href="#">Скрыть детали</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clients__row">
+                        <div class="clients__content-item js-item">
+                            <div class="clients__item-head type-3">
+                                <div class="clients__col">
+                                    <div class="clients__icon"><svg class="svg-archive-company-dims">
+                                            <use xlink:href="#archive-company"></use>
+                                        </svg></div>
+                                    <div class="clients__name">
+                                        <h3>ООО &quot;САТУРН&quot;</h3>
+                                        <p>ИНН: 5404461077</p>
+                                        <p>ОГРН: 1125476079981</p>
+                                    </div>
+                                </div>
+                                <div class="clients__col clients__col-warning">
+                                    <div class="clients__icon-red"><svg class="svg-no-contacts-dims">
+                                            <use xlink:href="#no-contacts"></use>
+                                        </svg>
+                                        <p>C клиентом нет заключеных договоров</p><a href="#">Заключить договор</a>
+                                    </div>
+                                </div>
+                                <div class="clients__col-warrow">
+                                    <div class="clients__item-arrow"><a class="js-arrow" href="#"><svg class="svg-select-arrow-dims">
+                                                <use xlink:href="#select-arrow"></use>
+                                            </svg></a></div>
+                                </div>
+                            </div>
+                            <div class="clients__item-info js-info">
+                                <div class="clients__info-title">
+                                    <h3>Объекты клиента</h3>
+                                    <p>Всего объектов: 2</p>
+                                </div>
+                                <div class="clients__info-objects">
+                                    <div class="clients__info-object clients__info-object--head">Объект</div>
+                                    <div class="clients__info-object">Объект №1</div>
+                                    <div class="clients__info-object">Объект №2</div>
+                                </div>
+                                <div class="clients__info-footer"><a class="clients__info-btn" href="#"><svg class="svg-card-dims">
+                                            <use xlink:href="#card"></use>
+                                        </svg><span>Перейти в карточку</span></a><a class="clients__info-link js-close-item" href="#">Скрыть детали</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clients__row">
+                        <div class="clients__content-item js-item">
+                            <div class="clients__item-head type-4">
+                                <div class="clients__col">
+                                    <div class="clients__icon"><svg class="svg-active-individual-client-dims">
+                                            <use xlink:href="#active-individual-client"></use>
+                                        </svg></div>
+                                    <div class="clients__name">
+                                        <h3>Константинопольский Александр Валентинович</h3>
+                                        <p>ИНН: Не указан</p>
+                                        <p>Паспорт: 4200 200793</p>
+                                    </div>
+                                </div>
+                                <div class="clients__col">
+                                    <div class="clients__icon"><svg class="svg-documents-ok-dims">
+                                            <use xlink:href="#documents-ok"></use>
+                                        </svg></div>
+                                    <div class="clients__data">
+                                        <h3>№12-СЖ/12 от 24.01.2019</h3>
+                                        <p>Тип договора: по норме</p>
+                                    </div>
+                                </div>
+                                <div class="clients__col"><svg class="svg-object-dims">
+                                        <use xlink:href="#object"></use>
+                                    </svg><span>2 объекта</span></div>
+                                <div class="clients__col">
+                                    <div class="clients__col-icons"><svg class="svg-money-dims">
+                                            <use xlink:href="#money"></use>
+                                        </svg>
+                                        <svg class="svg-recycle-dims">
+                                            <use xlink:href="#recycle"></use>
+                                        </svg></div>
+                                    <div class="clients__col-datas"><span>1 024 &#8381;</span><span>1 м<sup>3</sup></span></div>
+                                </div>
+                                <div class="clients__col">
+                                    <div class="clients__col-icons"><svg class="svg-area-dims">
+                                            <use xlink:href="#area"></use>
+                                        </svg>
+                                        <svg class="svg-container-dims">
+                                            <use xlink:href="#container"></use>
+                                        </svg></div>
+                                    <div class="clients__col-datas"><span>2 геозоны</span><span>3 контейнера - 10.2 м<sup>3</sup></span></div>
+                                </div>
+                                <div class="clients__col-warrow">
+                                    <div class="clients__item-arrow"><a class="js-arrow" href="#"><svg class="svg-select-arrow-dims">
+                                                <use xlink:href="#select-arrow"></use>
+                                            </svg></a></div>
+                                </div>
+                            </div>
+                            <div class="clients__item-info js-info">
+                                <div class="clients__info-title">
+                                    <h3>Объекты клиента</h3>
+                                    <p>Всего объектов: 2</p>
+                                </div>
+                                <div class="clients__info-objects">
+                                    <div class="clients__info-object clients__info-object--head">Объект</div>
+                                    <div class="clients__info-object">Объект №1</div>
+                                    <div class="clients__info-object">Объект №2</div>
+                                </div>
+                                <div class="clients__info-footer"><a class="clients__info-btn" href="#"><svg class="svg-card-dims">
+                                            <use xlink:href="#card"></use>
+                                        </svg><span>Перейти в карточку</span></a><a class="clients__info-link js-close-item" href="#">Скрыть детали</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clients__row">
+                        <div class="clients__content-item js-item">
+                            <div class="clients__item-head type-5">
+                                <div class="clients__col">
+                                    <div class="clients__icon"><svg class="svg-not-active-individual-client-dims">
+                                            <use xlink:href="#not-active-individual-client"></use>
+                                        </svg></div>
+                                    <div class="clients__name">
+                                        <h3>Воронов Александр Ярославович</h3>
+                                        <p>ИНН: Не указан</p>
+                                        <p>Паспорт: Не указан</p>
+                                    </div>
+                                </div>
+                                <div class="clients__col">
+                                    <div class="clients__icon"><svg class="svg-documents-dims">
+                                            <use xlink:href="#documents"></use>
+                                        </svg></div>
+                                    <div class="clients__data">
+                                        <h3>№12-СЖ/12 от 24.01.2019</h3>
+                                        <p>Тип договора: по норме</p>
+                                    </div>
+                                </div>
+                                <div class="clients__col"><svg class="svg-object-dims">
+                                        <use xlink:href="#object"></use>
+                                    </svg><span>1 объект</span></div>
+                                <div class="clients__col">
+                                    <div class="clients__col-icons"><svg class="svg-money-dims">
+                                            <use xlink:href="#money"></use>
+                                        </svg>
+                                        <svg class="svg-recycle-dims">
+                                            <use xlink:href="#recycle"></use>
+                                        </svg></div>
+                                    <div class="clients__col-datas"><span>3 687 &#8381;</span><span>2.56 м<sup>3</sup></span></div>
+                                </div>
+                                <div class="clients__col">
+                                    <div class="clients__col-icons"><svg class="svg-area-dims">
+                                            <use xlink:href="#area"></use>
+                                        </svg>
+                                        <svg class="svg-container-dims">
+                                            <use xlink:href="#container"></use>
+                                        </svg></div>
+                                    <div class="clients__col-datas"><span>1 геозона</span><span>1 контейнер - 0.66 м<sup>3</sup></span></div>
+                                </div>
+                                <div class="clients__col-warrow">
+                                    <div class="clients__item-arrow"><a class="js-arrow" href="#"><svg class="svg-select-arrow-dims">
+                                                <use xlink:href="#select-arrow"></use>
+                                            </svg></a></div>
+                                </div>
+                            </div>
+                            <div class="clients__item-info js-info">
+                                <div class="clients__info-title">
+                                    <h3>Объекты клиента</h3>
+                                    <p>Всего объектов: 1</p>
+                                </div>
+                                <div class="clients__info-objects">
+                                    <div class="clients__info-object clients__info-object--head">Объект</div>
+                                    <div class="clients__info-object">Объект №1</div>
+                                </div>
+                                <div class="clients__info-footer"><a class="clients__info-btn" href="#"><svg class="svg-card-dims">
+                                            <use xlink:href="#card"></use>
+                                        </svg><span>Перейти в карточку</span></a><a class="clients__info-link js-close-item" href="#">Скрыть детали</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/scripts/libs.min.js"></script>
+    <script src="./assets/scripts/script.min.js"></script>
+</body>
+
+</html>

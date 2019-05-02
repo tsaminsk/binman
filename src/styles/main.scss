@@ -1,0 +1,62 @@
+// $desktops: 1200px;
+// $laptops: 992px;
+// $tablets: 768px;
+// $phones: 480px;
+$bgColorDark:   #29313C;
+$bgColorDark2:  #323A45;
+$bgColorLight:  #EFF3F5;
+$bgColorLight2: #F7FBFC;
+$colorGreen:    #B2D170;
+$colorRed:      #FF5943;
+$colorIndigo:   #8EA4B5;
+$colorGray:     #E8EFF1;
+$colorDark:     #475364;
+
+@function rem($pixels) {
+    @return #{$pixels / 16px}rem;
+}
+
+// @mixin below($width, $orientation: 'width') {
+//     @media screen and (max-#{$orientation}: $width) {
+//         @content;
+//     }
+// }
+
+// @mixin above($width, $orientation: 'width') {
+//     @media screen and (min-#{$orientation}: $width) {
+//         @content;
+//     }
+// }
+
+// @mixin between($minWidth, $maxWidth, $orientation: 'width') {
+//     @media screen and (min-#{$orientation}: $minWidth) and (max-#{$orientation}: $maxWidth) {
+//         @content;
+//     }
+// }
+
+@mixin mq($from, $to: false) {
+    @if $to {
+        @media (min-width: #{$from}px) and (max-width: #{$to}px) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (max-width: #{$from}px) {
+            @content;
+        }
+    }
+}
+
+@import "./common/_normalize.scss";
+
+@import "./modules/_fonts.scss";
+@import "./modules/_layout.scss";
+
+@import "./modules/_svg.scss";
+@import "./modules/_header.scss";
+@import "./modules/_footer.scss";
+@import "./modules/_sidebar.scss";
+
+@import "./pages/_index.scss";
+@import "./pages/_clients.scss";

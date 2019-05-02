@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="active-company" class="cls-1" d="M17,18H1V11H6v1h6V11h5v7Zm-6-7H7V9h4v2ZM6,10H0V4H5V0h8V4h5v6H12V8H6v2ZM7,2V4h4V2Z"/>
+</svg>
