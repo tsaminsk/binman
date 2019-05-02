@@ -5,13 +5,11 @@
     min-height: calc(100vh - 66px);
     padding: 20px 30px;
     font-family: 'Roboto', sans-serif;
-    background-color: $bgColorLight;
 
     &__title {
         padding: 5px 0 21px;
 
         h1 {
-            // font-family: 'Roboto', sans-serif;
             font-size: 22px;
             line-height: 26px;
             font-weight: 700;
@@ -19,7 +17,6 @@
         }
 
         p {
-            // font-family: 'Roboto', sans-serif;
             font-size: 12px;
             line-height: 14px;
             font-weight: 400;
@@ -48,7 +45,6 @@
         display: inline-block;
         vertical-align: top;
         padding: 15px 0 10px 20px;
-        // font-family: 'Roboto', sans-serif;
         font-size: 11px;
         line-height: 15px;
         font-weight: 700;
@@ -94,7 +90,7 @@
 
         &.is-opacity {
 
-            &:after {
+            &::after {
                 opacity: 0.5;
             }
         }
